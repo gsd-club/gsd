@@ -1,26 +1,197 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0a0a0a;
+  --foreground: #ffffff;
+  --muted: #a1a1aa;
+  --accent: #0066ff;
+  --accent-glow: #00d4ff;
+  --card-bg: #111111;
+  --card-border: #1e1e1e;
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-jetbrains-mono);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-glow: var(--accent-glow);
+  --color-card-bg: var(--card-bg);
+  --color-card-border: var(--card-border);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-jetbrains-mono);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Gradient text utility */
+.gradient-text {
+  background: linear-gradient(135deg, #0066ff, #00d4ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glow effect */
+.glow {
+  box-shadow: 0 0 20px rgba(0, 102, 255, 0.3), 0 0 60px rgba(0, 102, 255, 0.1);
+}
+
+.glow-text {
+  text-shadow: 0 0 20px rgba(0, 102, 255, 0.5);
+}
+
+/* Animated gradient background for hero */
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.animated-gradient {
+  background: linear-gradient(-45deg, #0a0a0a, #0d1b2a, #0a0a0a, #001a33);
+  background-size: 400% 400%;
+  animation: gradient-shift 15s ease infinite;
+}
+
+/* Floating orb animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-20px) scale(1.05); }
+}
+
+.float-animation {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Pulse glow */
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.8; }
+}
+
+.pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+/* Timeline flow animation (Process section) */
+@keyframes timeline-flow {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 0% 200%;
+  }
+}
+
+/* Rotating border animation (Pricing section) */
+@keyframes border-spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 8px 2px rgba(0,212,255,0.5), 0 0 20px 4px rgba(0,102,255,0.3); }
+  50%      { box-shadow: 0 0 14px 4px rgba(0,212,255,0.8), 0 0 32px 8px rgba(0,102,255,0.5); }
+}
+
+/* Chromatic aberration on hover */
+.chromatic-text:hover {
+  text-shadow: -1px 0 rgba(255,0,0,0.15), 1px 0 rgba(0,100,255,0.15);
+}
+
+/* Selection style */
+::selection {
+  background: rgba(0, 102, 255, 0.3);
+  color: white;
+}
+
+/* ========== Aurora Background Keyframes ========== */
+
+@keyframes aurora-drift-1 {
+  0%, 100% {
+    transform: translate(0%, 0%) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translate(15%, 10%) rotate(5deg) scale(1.1);
+  }
+  50% {
+    transform: translate(-5%, 20%) rotate(-3deg) scale(0.95);
+  }
+  75% {
+    transform: translate(-15%, 5%) rotate(7deg) scale(1.05);
+  }
+}
+
+@keyframes aurora-drift-2 {
+  0%, 100% {
+    transform: translate(0%, 0%) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translate(-20%, 15%) rotate(-6deg) scale(1.08);
+  }
+  50% {
+    transform: translate(10%, -10%) rotate(4deg) scale(1.12);
+  }
+  75% {
+    transform: translate(15%, 20%) rotate(-5deg) scale(0.92);
+  }
+}
+
+@keyframes aurora-drift-3 {
+  0%, 100% {
+    transform: translate(0%, 0%) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translate(10%, -20%) rotate(8deg) scale(1.05);
+  }
+  50% {
+    transform: translate(20%, 10%) rotate(-4deg) scale(1.1);
+  }
+  75% {
+    transform: translate(-10%, -5%) rotate(3deg) scale(0.97);
+  }
+}
+
+@keyframes aurora-drift-4 {
+  0%, 100% {
+    transform: translate(0%, 0%) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translate(-15%, -10%) rotate(-7deg) scale(1.06);
+  }
+  50% {
+    transform: translate(5%, 15%) rotate(5deg) scale(0.94);
+  }
+  75% {
+    transform: translate(20%, -15%) rotate(-3deg) scale(1.08);
+  }
 }
