@@ -464,9 +464,9 @@ function HeroOverlays() {
           </div>
         </motion.div>
 
-        {/* ── Top Right: Manifesto ── */}
+        {/* ── Top Right: Manifesto (hidden on mobile to avoid text overlap) ── */}
         <motion.div
-          className="absolute top-8 sm:top-12 right-6 sm:right-10 text-right max-w-[240px] sm:max-w-[280px]"
+          className="absolute top-8 sm:top-12 right-6 sm:right-10 text-right max-w-[240px] sm:max-w-[280px] hidden sm:block"
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: BOOM + 0.7, ease: [0.16, 1, 0.3, 1] }}

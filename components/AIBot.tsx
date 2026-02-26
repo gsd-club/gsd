@@ -971,10 +971,10 @@ export default function AIBot({
 
             {/* Monitor + Keyboard */}
             <motion.div
-              className="absolute top-1/2 -translate-y-1/2 z-[3] hidden sm:block"
+              className="absolute top-1/2 -translate-y-1/2 z-[3]"
               style={{
                 left: "52%",
-                width: "clamp(240px, 35%, 480px)",
+                width: "clamp(160px, 35vw, 480px)",
                 x: monitorX,
                 opacity: monitorOpacity,
               }}
@@ -995,7 +995,7 @@ export default function AIBot({
                     }}
                   >
                     <div
-                      className="flex items-center gap-2 px-4 py-2.5"
+                      className="flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-4 py-1.5 sm:py-2.5"
                       style={{
                         borderBottom: "1px solid rgba(40,80,160,0.12)",
                         background:
@@ -1003,21 +1003,21 @@ export default function AIBot({
                       }}
                     >
                       <div
-                        className="w-3 h-3 rounded-full"
+                        className="w-2 h-2 sm:w-3 sm:h-3 rounded-full"
                         style={{
                           background: "#ff5f57",
                           boxShadow: "0 0 4px rgba(255,95,87,0.3)",
                         }}
                       />
                       <div
-                        className="w-3 h-3 rounded-full"
+                        className="w-2 h-2 sm:w-3 sm:h-3 rounded-full"
                         style={{
                           background: "#febc2e",
                           boxShadow: "0 0 4px rgba(254,188,46,0.3)",
                         }}
                       />
                       <div
-                        className="w-3 h-3 rounded-full"
+                        className="w-2 h-2 sm:w-3 sm:h-3 rounded-full"
                         style={{
                           background: "#28c840",
                           boxShadow: "0 0 4px rgba(40,200,64,0.3)",
@@ -1033,7 +1033,7 @@ export default function AIBot({
 
                     <div
                       className="relative overflow-hidden"
-                      style={{ height: "clamp(140px, 26vw, 320px)" }}
+                      style={{ height: "clamp(100px, 26vw, 320px)" }}
                     >
                       <motion.div
                         initial={{ y: 0 }}
