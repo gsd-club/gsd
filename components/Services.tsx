@@ -211,7 +211,7 @@ export default function Services() {
         className="pointer-events-none absolute inset-0 flex items-center justify-center"
       >
         <motion.div
-          className="absolute w-[600px] h-[600px] rounded-full opacity-[0.07]"
+          className="absolute w-[300px] h-[300px] sm:w-[450px] sm:h-[450px] md:w-[600px] md:h-[600px] rounded-full opacity-[0.07]"
           style={{
             background:
               "radial-gradient(circle, #00d4ff 0%, #0066ff 40%, transparent 70%)",

@@ -340,7 +340,7 @@ function BoomEffect() {
 
 function PerspectiveGrid() {
   return (
-    <div className="absolute bottom-0 left-0 right-0 h-[50vh] overflow-hidden pointer-events-none">
+    <div className="absolute bottom-0 left-0 right-0 h-[30vh] sm:h-[40vh] md:h-[50vh] overflow-hidden pointer-events-none">
       {/* Perspective container */}
       <div
         style={{
@@ -561,7 +561,7 @@ export default function Hero() {
 
       {/* Single subtle glow orb */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none z-[1]">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-accent/[0.05] blur-[200px]" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] sm:w-[450px] sm:h-[450px] md:w-[600px] md:h-[600px] rounded-full bg-accent/[0.05] blur-[200px]" />
       </div>
 
       {/* Radial vignette overlay */}
@@ -570,8 +570,8 @@ export default function Hero() {
       {/* ────────────── BOOM EFFECT ────────────── */}
       <BoomEffect />
 
-      {/* ────────────── 3D floating shapes layer — burst in with overshoot ────────────── */}
-      <div className="absolute inset-0 pointer-events-none z-[3]">
+      {/* ────────────── 3D floating shapes layer — burst in with overshoot (hidden on mobile) ────────────── */}
+      <div className="absolute inset-0 pointer-events-none z-[3] hidden sm:block">
         {FLOATING_SHAPES.map((shape, index) => {
           const layer = parallaxLayers[index % parallaxLayers.length];
 
@@ -651,7 +651,7 @@ export default function Hero() {
           ease: "easeOut",
         }}
       >
-        <div className="w-full h-[85vh] max-h-full">
+        <div className="w-full h-[70vh] sm:h-[80vh] md:h-[85vh] max-h-full">
           <AIBot mouseX={mouseX} mouseY={mouseY} entranceDelay={BOOM + 0.25} />
         </div>
       </motion.div>

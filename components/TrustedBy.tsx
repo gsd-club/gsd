@@ -16,13 +16,13 @@ export default function TrustedBy() {
           <p className="text-sm font-mono text-muted/60 tracking-widest uppercase mb-8">
             Trusted by teams building the future
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-8 md:gap-16 opacity-40">
+          <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-8 md:gap-16 opacity-40">
             {/* Placeholder logos - replace with real client logos */}
             {["Startup Co", "TechFlow", "BuildLab", "ScaleAI", "DevForge"].map(
               (name) => (
                 <span
                   key={name}
-                  className="text-lg font-semibold text-white/50 tracking-wide"
+                  className="text-base sm:text-lg font-semibold text-white/50 tracking-wide"
                 >
                   {name}
                 </span>

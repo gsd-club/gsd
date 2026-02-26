@@ -73,7 +73,7 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="md:hidden p-2 text-muted hover:text-white"
+            className="md:hidden p-3 -mr-1 text-muted hover:text-white"
           >
             <svg
               width="24"

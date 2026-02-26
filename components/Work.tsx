@@ -60,7 +60,7 @@ function ProjectCard({
   const numberLabel = String(index + 1).padStart(2, "0");
 
   return (
-    <div className="group relative flex-shrink-0 w-[80vw] md:w-[65vw] h-[65vh] md:h-[70vh]">
+    <div className="group relative flex-shrink-0 w-[85vw] sm:w-[80vw] md:w-[65vw] h-[55vh] sm:h-[60vh] md:h-[70vh]">
       {/* Glassmorphism card */}
       <div className="relative h-full rounded-2xl bg-card-bg/60 backdrop-blur-xl border border-card-border/80 overflow-hidden transition-all duration-500 hover:border-white/[0.12] hover:bg-card-bg/80">
         {/* Ambient glow behind card on hover */}
@@ -250,7 +250,7 @@ export default function Work() {
       {/* Scroll-triggered wrapper — GSAP pins this */}
       <div ref={triggerRef} className="relative overflow-hidden bg-background">
         {/* Subtle ambient background glow */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] rounded-full bg-accent/[0.03] blur-[120px] pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[200px] sm:w-[600px] sm:h-[300px] md:w-[800px] md:h-[400px] rounded-full bg-accent/[0.03] blur-[120px] pointer-events-none" />
 
         {/* Viewport-height container */}
         <div className="h-screen flex flex-col">

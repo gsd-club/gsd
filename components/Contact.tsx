@@ -275,15 +275,17 @@ export default function Contact() {
   return (
     <section id="contact" className="py-24 md:py-32 relative overflow-hidden">
       {/* Large subtle background glow orb */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] pointer-events-none">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] sm:w-[700px] sm:h-[700px] md:w-[1000px] md:h-[1000px] pointer-events-none">
         <div className="absolute inset-0 bg-accent/[0.04] rounded-full blur-[250px]" />
         <div className="absolute inset-[15%] bg-[#00d4ff]/[0.03] rounded-full blur-[200px]" />
       </div>
 
-      {/* 3D Floating decorative elements */}
-      {floatingShapes.map((shape, i) => (
-        <FloatingShape key={i} {...shape} />
-      ))}
+      {/* 3D Floating decorative elements (hidden on mobile) */}
+      <div className="hidden sm:block">
+        {floatingShapes.map((shape, i) => (
+          <FloatingShape key={i} {...shape} />
+        ))}
+      </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <SectionHeading
@@ -292,7 +294,7 @@ export default function Contact() {
           description="Ready to start your project? Book a free consultation call."
         />
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 max-w-5xl mx-auto">
           {/* -------------------------------------------------------- */}
           {/*  Left Column — Contact Info                              */}
           {/* -------------------------------------------------------- */}
@@ -395,7 +397,7 @@ export default function Contact() {
           {/*  Right Column — Form inside TiltCard                     */}
           {/* -------------------------------------------------------- */}
           <div style={{ perspective: 1200 }}>
-            <TiltCard tiltAmount={5} glare={true} className="p-8">
+            <TiltCard tiltAmount={5} glare={true} className="p-5 sm:p-8">
               <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
                 {/* Name */}
                 <div>

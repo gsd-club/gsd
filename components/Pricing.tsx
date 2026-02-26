@@ -229,7 +229,7 @@ function PricingCardContent({
       {/* Price */}
       <div className="mb-8">
         <span
-          className={`text-5xl font-extrabold tracking-tight ${
+          className={`text-4xl sm:text-5xl font-extrabold tracking-tight ${
             tier.popular ? "gradient-text" : ""
           }`}
         >
@@ -340,7 +340,7 @@ export default function Pricing() {
       {/* Ambient background glow */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] opacity-[0.04]"
+        className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[300px] sm:w-[600px] sm:h-[450px] md:w-[800px] md:h-[600px] opacity-[0.04]"
         style={{
           background:
             "radial-gradient(ellipse, #0066ff 0%, transparent 70%)",

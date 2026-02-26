@@ -199,8 +199,8 @@ export default function WhyAI() {
 
       {/* Ambient depth glow behind the cards */}
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute left-1/4 top-1/3 h-[420px] w-[420px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-red-500/[0.04] blur-[120px]" />
-        <div className="absolute right-1/4 top-1/3 h-[420px] w-[420px] translate-x-1/2 -translate-y-1/2 rounded-full bg-accent/[0.06] blur-[120px]" />
+        <div className="absolute left-1/4 top-1/3 h-[250px] w-[250px] sm:h-[350px] sm:w-[350px] md:h-[420px] md:w-[420px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-red-500/[0.04] blur-[120px]" />
+        <div className="absolute right-1/4 top-1/3 h-[250px] w-[250px] sm:h-[350px] sm:w-[350px] md:h-[420px] md:w-[420px] translate-x-1/2 -translate-y-1/2 rounded-full bg-accent/[0.06] blur-[120px]" />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
